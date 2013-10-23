@@ -1,0 +1,1 @@
+A simple block device implementation for Mirage over a file on Unix.
