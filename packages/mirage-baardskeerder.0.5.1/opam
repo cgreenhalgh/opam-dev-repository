@@ -1,0 +1,13 @@
+opam-version: "1"
+maintainer: "chris.greenhalgh@nottingham.ac.uk"
+build: [
+  ["sh" "-c" "cd src && %{make}%" ]
+  ["sh" "-c" "cd src && %{make}% install"]
+]
+remove: [
+  ["ocamlfind" "remove" "mirage-baardskeerder"]
+]
+depends: ["ocamlfind" "ounit" "quickcheck" "lwt" "mirage" "unix-simple-blkdev"]
+
+homepage: "https://github.com/cgreenhalgh/baardskeerder"
+license: "LGPL v3"
