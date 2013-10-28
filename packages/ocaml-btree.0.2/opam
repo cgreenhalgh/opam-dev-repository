@@ -1,0 +1,12 @@
+opam-version: "1"
+maintainer: "chris.greenhalgh@nottingham.ac.uk"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--disable-tests" "--prefix" "%{prefix}%" ]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: [
+  ["ocamlfind" "remove" "btree"]
+]
+depends: ["lwt" "ocamlfind" "ounit" "mirage" "mirage-baardskeerder"]
+tags: [ "org:mirage" ]
